@@ -1,0 +1,15 @@
+syntax="proto3";
+
+option csharp_namespace="ServerApp.Service.Proto";
+
+message CreateProductRequestDTO{
+string Name=1;
+string Brand=2;
+int32 Pame=3;
+}
+message CreateProductResponseDTO{
+string message=1;
+}
+service ProductService{
+rpc CreateProduct(CreateProductRequestDTO) returns (CreateProductResponseDTO){}
+}

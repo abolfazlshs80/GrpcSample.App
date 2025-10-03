@@ -1,0 +1,13 @@
+﻿syntax="proto3";
+
+option csharp_namespace="ServerApp.Service.Proto";
+
+message request{
+string name=1;
+}
+message response{
+string message=1;
+}
+service Helloservice{
+rpc sayHello(request) returns (response){}
+}
